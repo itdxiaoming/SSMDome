@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmdong.SSMDome.moudle.point.dao.PointDao">
+ 
+	<insert id="insertPointByXY" parameterType="com.xmdong.SSMDome.moudle.point.bin.Point">
+	    INSERT INTO 
+	           point 
+	           (point_x,point_y) 
+	    VALUES 
+	           (#{pointX},#{pointY})
+	</insert>
+	
+	
+	<select id="getAll" resultType="com.xmdong.SSMDome.moudle.point.bin.Point">
+		SELECT id,
+		       point_x,
+		       point_y,
+		       is_finish
+ 		FROM point
+	</select>
+</mapper>
